@@ -1,22 +1,18 @@
 <template>
-  <div class="">
-    <!-- <div class="absolute"> -->
-    <div class="bg-primary-white w-full rounded-xl -mt-20">
-      <h4 class="text-2xl text-primary-gray font-bold px-12 py-10">
-        Development Skills
-      </h4>
-      <div class="px-12 py-4">
-        <ul>
-          <li v-for="skill in skills" :key="skill.id">
-            <div class="flex justify-between items-center py-4">
-              <div>{{ skill.skill }}</div>
-              <div class="capitalize">{{ skill.level }}</div>
-            </div>
-          </li>
-        </ul>
-      </div>
+  <div class="bg-primary-white w-full rounded-xl -mt-20">
+    <h4 class="text-2xl text-primary-gray font-bold px-12 py-10">
+      Development Skills
+    </h4>
+    <div class="px-12 py-4">
+      <ul>
+        <li v-for="skill in skills" :key="skill.id">
+          <div class="flex justify-between items-center py-4">
+            <div>{{ skill.skill }}</div>
+            <div class="capitalize">{{ skill.level }}</div>
+          </div>
+        </li>
+      </ul>
     </div>
-    <!-- </div> -->
   </div>
 </template>
 <script setup>
