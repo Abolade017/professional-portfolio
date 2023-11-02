@@ -78,7 +78,7 @@ import Skills from "./Skills.vue";
       </div>
     </div>
   </div>
-  <Skills class="absolute w-[1520px] inset-x-20" />
+  <Skills class="absolute w-[1420px] inset-x-20" />
   <!-- <div class="w-2/5 bg-primary-blue"></div>
      <div class="w-3/5 bg-primary-white"></div> -->
 </template>
