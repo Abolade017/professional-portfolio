@@ -71,14 +71,14 @@ import Skills from "./Skills.vue";
             <button
               class="bg-primary-blue text-primary-white py-2 px-4 text-base rounded-md"
             >
-              Learn more
+              <RouterLink to="/about"> Learn more</RouterLink>
             </button>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <Skills class="absolute w-[1420px] inset-x-20" />
+  <Skills class="absolute w-full" id="skills" />
   <!-- <div class="w-2/5 bg-primary-blue"></div>
      <div class="w-3/5 bg-primary-white"></div> -->
 </template>
