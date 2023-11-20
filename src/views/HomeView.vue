@@ -1,10 +1,12 @@
 <script setup>
 import { RouterLink } from "vue-router";
-import Skills from "./Skills.vue";
+import Skills from "../components/Skills.vue";
+import Project from "../components/Projects.vue";
+import ProjectView from "./ProjectView.vue";
 </script>
 
 <template>
-  <div class="px-10 flex">
+  <div class="px-10 flex" id="about">
     <div class="w-2/5 bg-primary-blue relative text-lg pb-60">
       <div class="pl-24 h-96 flex items-center">
         <h2 class="text-primary-white">
@@ -78,7 +80,8 @@ import Skills from "./Skills.vue";
       </div>
     </div>
   </div>
-  <Skills class="absolute w-full" id="skills" />
-  <!-- <div class="w-2/5 bg-primary-blue"></div>
-     <div class="w-3/5 bg-primary-white"></div> -->
+  <Skills class="" id="skills" />
+  <div id="projects">
+    <Project />
+  </div>
 </template>

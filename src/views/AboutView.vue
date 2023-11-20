@@ -53,11 +53,11 @@
       <p>
         When I'm not immersed in lines of code, you'll likely find me exploring
         the latest design trends, I will be watching football highlight because
-        I am a football lover, or I watch movie or i make calls to my immediate
+        I am a football lover, or I watch movie or I make calls to my immediate
         family and friends. I believe that a well-rounded life enhances
         creativity and problem-solving skills.
       </p>
-      <h2 class="py-6 text-2xl text-primary-gray font-bold">
+      <!-- <h2 class="py-6 text-2xl text-primary-gray font-bold">
         Let's Build Something Amazing
       </h2>
 
@@ -68,7 +68,7 @@
         realities. Thanks for stopping by, and I look forward to the possibility
         of collaborating with you!
         <a href="#contact">[Contact Information]</a>
-      </p>
+      </p> -->
     </div>
     <div class="w-5/12">
       <img

@@ -10,12 +10,11 @@
           </div>
           <div class="flex justify-between space-x-12 text-primary-gray">
             <RouterLink to="/" class="hover:text-primary-blue">Home</RouterLink>
-            <RouterLink to="/about" class="hover:text-primary-blue"
-              >About
-            </RouterLink>
-            <RouterLink to="/projects" class="hover:text-primary-blue"
-              >Project</RouterLink
+            <a href="#about" class="hover:text-primary-blue">About </a>
+            <a href="#skills" class="hover:text-primary-blue no-underline"
+              >Skills</a
             >
+            <a href="#projects" class="hover:text-primary-blue">Project</a>
           </div>
         </div>
       </nav>
