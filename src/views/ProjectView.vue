@@ -23,6 +23,6 @@ const projects = [
   { id: 2, photo: "AdviceGenerator", name: "Advice generator" },
   { id: 3, photo: "fitness", name: "Fitness Landing Page" },
   { id: 4, photo: "CountryFlag", name: "country Flag Api" },
-  { id: 5, photo: "JobListing", name: "JOb Listing" },
+  // { id: 5, photo: "JobListing", name: "JOb Listing" },
 ];
 </script>
