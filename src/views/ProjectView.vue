@@ -3,13 +3,11 @@
     <h1 class="text-primary-gray font-bold text-3xl py-6">Projects</h1>
     <div class="flex justify-between">
       <div v-for="project in projects" :key="project.id">
-        <div
-          class="bg-white shadow-md rounded-md hover:bg-primary-blue hover:opacity-50"
-        >
+        <div class="bg-white shadow-md rounded-md hover:shadow-primary-blue">
           <img
             :src="/projectImages/ + project.photo + '.png'"
             :alt="project.name"
-            class="h-96 hover:shadow-primary-blue hover:opacity-90"
+            class="h-96 hover:bg-primary-blue"
           />
           <div class="text-center text-primary-gray text-lg pt-12">
             {{ project.name }}

@@ -4,12 +4,12 @@
     <div class="flex justify-between space-x-12">
       <div v-for="project in projects" :key="project.id">
         <div
-          class="bg-white shadow-md rounded-md h-96 hover:bg-primary-blue hover:opacity-50"
+          class="bg-white shadow-md rounded-md h-96 hover:bg-primary-blue hover:opacity-90 hover:shadow-none"
         >
           <img
             :src="/projectImages/ + project.photo + '.png'"
             :alt="project.photo"
-            class="h-64 hover:shadow-primary-blue hover:opacity-90"
+            class="h-64 hover:bg-primary-blue hover:opacity-20"
           />
           <div class="text-center text-primary-gray text-lg pt-12">
             {{ project.name }}
