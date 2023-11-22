@@ -1,10 +1,3 @@
-<script setup>
-import { RouterLink } from "vue-router";
-import Skills from "../components/Skills.vue";
-import Project from "../components/Projects.vue";
-import ProjectView from "./ProjectView.vue";
-</script>
-
 <template>
   <div class="px-10 flex" id="about">
     <div class="w-2/5 bg-primary-blue relative text-lg pb-60">
@@ -82,6 +75,53 @@ import ProjectView from "./ProjectView.vue";
   </div>
   <Skills class="" id="skills" />
   <div id="projects">
-    <Project />
+    <div class="px-12">
+      <h1 class="text-primary-gray font-bold text-3xl py-6">Projects</h1>
+      <div class="flex justify-between space-x-12">
+        <div v-for="project in projects" :key="project.id">
+          <Project
+            :name="project.name"
+            :screenshot="project.photo"
+            :url="project.url"
+          />
+        </div>
+      </div>
+      <div class="flex justify-end items-center pt-4">
+        <RouterLink to="/projects" class="text-primary-blue text-lg"
+          >See More</RouterLink
+        >
+      </div>
+    </div>
   </div>
 </template>
+<script setup>
+import { RouterLink } from "vue-router";
+import Skills from "../components/Skills.vue";
+import Project from "../components/Projects.vue";
+const projects = [
+  {
+    id: 1,
+    photo: "MovieFinder",
+    name: "movieFinder",
+    url: "https://movie-finder-3a181b.netlify.app/",
+  },
+  {
+    id: 2,
+    photo: "AdviceGenerator",
+    name: "Advice Generator",
+    url: "https://advice-generator-appd83a1.netlify.app/",
+  },
+  {
+    id: 3,
+    photo: "fitness",
+    name: "Fitness Landing Page",
+    url: "https://fitness-gym-7df655.netlify.app/",
+  },
+  {
+    id: 4,
+    photo: "CountryFlag",
+    name: "country Flag Api",
+    url: "https://country-api-flag-b4682.netlify.app/",
+  },
+];
+</script>
