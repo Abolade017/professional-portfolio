@@ -1,7 +1,10 @@
 <template>
-  <div class="px-10 flex" id="about">
-    <div class="w-2/5 bg-primary-blue relative text-lg pb-60">
-      <div class="pl-24 h-96 flex items-center">
+  <NavBar class="" />
+  <div class="px-0 md:px-10 flex flex-col md:flex-row" id="about">
+    <div
+      class="w-full md:w-2/5 bg-primary-blue relative text-lg pb-32 md:pb-60"
+    >
+      <div class="pl-4 md:pl-24 h-96 flex items-center">
         <h2 class="text-primary-white">
           <span class="font-bold text-3xl"> I'm Adeola Tawakalitu,</span
           ><span class="block text-2xl"> Frontend Developer </span>
@@ -9,8 +12,8 @@
         </h2>
       </div>
       <div>
-        <p class="pl-24 pb-4 text-primary-white text-lg">Follow me</p>
-        <div class="flex space-x-4 pl-24">
+        <p class="pl-4 md:pl-24 pb-4 text-primary-white text-lg">Follow me</p>
+        <div class="flex space-x-4 pl-4 md:pl-24">
           <a href="https://github.com/Abolade017" target="_blank ">
             <font-awesome-icon
               icon="fa-brands fa-github "
@@ -42,18 +45,24 @@
           <div class="border border-r border-primary-white"></div>
         </div>
       </div>
-      <div
-        class="absolute -right-44 top-48 bg-primary-white opacity-85 h-80 w-80 rounded-full"
-      >
-        <img
-          src="/public/display-picture.jpeg"
-          alt="display picture"
-          class="h-72 w-72 rounded-full absolute inset-4 border-2 border-primary-blue"
-        />
+      <div class="hidden md:block">
+        <div
+          class="absolute right-14 md:-right-44 top-52 md:top-48 bg-primary-white opacity-85 h-32 w-32 md:h-80 md:w-80 rounded-full"
+        >
+          <img
+            src="/public/display-picture.jpeg"
+            alt="display picture"
+            class="h-24 w-24 md:h-72 md:w-72 rounded-full absolute inset-4 border-2 border-primary-blue"
+          />
+        </div>
       </div>
     </div>
-    <div class="w-3/5 pl-20 flex justify-center h-full bg-white shadow-md">
-      <div class="flex justify-center items-center pt-40 h-full pb-96">
+    <div
+      class="w-full md:w-3/5 pl-4 md:pl-20 flex justify-center h-full bg-white shadow-md"
+    >
+      <div
+        class="flex justify-center items-center pt-10 md:pt-40 h-full pb-48 md:pb-96"
+      >
         <div class="">
           <h3 class="text-primary-gray text-xl font-bold pb-6">About Me</h3>
           <p class="text-primary-gray opacity-60 text-base">
@@ -75,10 +84,16 @@
   </div>
   <Skills class="" id="skills" />
   <div id="projects">
-    <div class="px-12">
-      <h1 class="text-primary-gray font-bold text-3xl py-6">Projects</h1>
-      <div class="flex justify-between space-x-12">
-        <div v-for="project in projects" :key="project.id">
+    <div class="px-4 md:px-12">
+      <h1 class="text-primary-gray font-bold text-3xl py-6 pl-4 md:pl-0">
+        Projects
+      </h1>
+      <div class="flex flex-wrap justify-between">
+        <div
+          v-for="project in projects"
+          :key="project.id"
+          class="w-1/2 md:w-1/4 px-2 md:px-6 py-4 md:py-0"
+        >
           <Project
             :name="project.name"
             :screenshot="project.photo"
@@ -93,11 +108,14 @@
       </div>
     </div>
   </div>
+  <Footer />
 </template>
 <script setup>
 import { RouterLink } from "vue-router";
+import NavBar from "../components/NavBar.vue";
 import Skills from "../components/Skills.vue";
 import Project from "../components/Projects.vue";
+import Footer from "../components/Footer.vue";
 const projects = [
   {
     id: 1,

@@ -1,8 +1,12 @@
 <template>
-  <div class="px-12">
+  <div class="px-2 md:px-12">
     <h1 class="text-primary-gray font-bold text-3xl py-6">My Projects</h1>
     <div class="flex flex-wrap gap-y-8">
-      <div v-for="project in projects" :key="project.id" class="w-1/4 px-6">
+      <div
+        v-for="project in projects"
+        :key="project.id"
+        class="w-1/2 md:w-1/4 px-2 md:px-6"
+      >
         <Project
           :name="project.name"
           :screenshot="project.photo"
@@ -11,9 +15,18 @@
       </div>
     </div>
   </div>
+  <div class="flex justify-center items-center py-10">
+    <button
+      class="bg-primary-blue h-14 w-48 rounded-2xl text-white text-xl"
+      @click="goBack"
+    >
+      Go Back
+    </button>
+  </div>
 </template>
 <script setup>
 import Project from "../components/Projects.vue";
+import { useRouter } from "vue-router";
 const projects = [
   {
     id: 1,
@@ -112,4 +125,8 @@ const projects = [
     url: "https://newsletter-subscribe-779870.netlify.app/",
   },
 ];
+const router = useRouter();
+function goBack() {
+  return router.push({ path: "/", name: "home" });
+}
 </script>

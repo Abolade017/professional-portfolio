@@ -1,6 +1,6 @@
 <template>
   <div class="about flex space-x-16 items-center p-20">
-    <div class="w-7/12">
+    <div class="w-full md:w-7/12">
       <h1 class="pb-6 text-3xl text-primary-gray font-bold">About Me</h1>
 
       <p>
@@ -70,7 +70,7 @@
         <a href="#contact">[Contact Information]</a>
       </p> -->
     </div>
-    <div class="w-5/12">
+    <div class="w-5/12 hidden md:block">
       <img
         src="/public/web-developer.avif"
         alt="developer's image"
