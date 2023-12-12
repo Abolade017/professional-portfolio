@@ -124,6 +124,12 @@ const projects = [
     name: "NewsLetter Landing Page",
     url: "https://newsletter-subscribe-779870.netlify.app/",
   },
+  {
+    id: 16,
+    photo: "news-landingpage",
+    name: "News Landing Page",
+    url: "https://lustrous-granita-f63786.netlify.app/",
+  },
 ];
 const router = useRouter();
 function goBack() {
